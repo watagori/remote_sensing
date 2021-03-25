@@ -13,7 +13,8 @@ SAT_TYPE = 1;
 
 if     SAT_TYPE == 1   % WorldView 2/3
 %   Shiraho area
-    filename(1)={'D:\Documents\GIS_data\Satellite image\5Sep2012_Shiraho\052875753010_01\052875753010_01_P001_MUL\12SEP05023730-M2AS-052875753010_01_P001.TIF'}; % ★★★
+% Input Image file
+    filename(1)={'P:\Satellite image\5Sep2012_Shiraho\052875753010_01\052875753010_01_P001_MUL\12SEP05023730-M2AS-052875753010_01_P001.TIF'}; % ★★★
     ACF  = [ 9.295654e-03  1.783568e-02  1.364197e-02  6.810718e-03  1.851735e-02  6.063145e-03  2.050828e-02  9.042234e-03 ]; % ★★★ Absolute Calibration Factors ★★★>>>>>>>>>  *.IMDを見て確認すること！！>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
     meanSunEl = 66.7; % ★★★ average sun elevation angle [degrees] ★★★>>>>>>>>>  *.IMDを見て確認すること！！>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 %     xa=[ 0.00269 0.00219 0.00224 0.00240 0.00254 0.00334 0.00370 0.00586 ]; % ★★★ atmospheric correction用パラメータ: 6SV2からのアウトプット
@@ -22,6 +23,10 @@ if     SAT_TYPE == 1   % WorldView 2/3
 %     xa=[ 0.00269 0.00219 0.00224 0.00240 0.00254 0.00334 0.00370 0.00586 ]; % ★★★ atmospheric correction用パラメータ: 6SV2からのアウトプット
 %     xb=[ 0.18156 0.11132 0.06446 0.04457 0.03372 0.02837 0.01879 0.01710 ]; % ★★★ atmospheric correction用パラメータ: 6SV2からのアウトプット
 %     xc=[ 0.20784 0.15368 0.10622 0.08068 0.06667 0.05441 0.04298 0.03719 ]; % ★★★ atmospheric correction用パラメータ: 6SV2からのアウトプット
+
+% Atmospheric correction is the process of removing the effects of the atmosphere on the reflectance values of images taken by satellite or airborne sensors.
+% 6SV1 (Second Simulation of a Satellite Signal in the Solar Spectrum, Vector, version 1) is an advanced radiative transfer code designed to simulate the reflection of solar radiation by a coupled atmosphere-surface system for a wide range of atmospheric, spectral and geometrical conditions.
+% 6sv's hint? :  https://artmotoolbox.com/radiative-transfer-models/89-atmospheric-rtms/27-6sv.html
     xa=[ 0.00262 0.00213 0.00219 0.00235 0.00249 0.00327 0.00363 0.00575 ]; % ★★★ atmospheric correction用パラメータ: 6SV2からのアウトプット
     xb=[ 0.16382 0.09627 0.05185 0.03290 0.02301 0.01822 0.00965 0.00826 ]; % ★★★ atmospheric correction用パラメータ: 6SV2からのアウトプット
     xc=[ 0.19264 0.13545 0.08524 0.05801 0.04323 0.03018 0.01845 0.01211 ]; % ★★★ atmospheric correction用パラメータ: 6SV2からのアウトプット
@@ -64,10 +69,11 @@ sig_filename = 'spec_sig4WV2_takido8.txt';
 clear DN DNrow;
 if     SAT_TYPE == 1   % WorldView 2/3
     N_VIS_BANDS = 6; % Number of Visible bands
+% Visible bands : https://gsp.humboldt.edu/OLM/Courses/GSP_216_Online/lesson3-1/bands.html
     N_TOT_BANDS = 8; % Number of total bands
 
     [DNrow, R] = geotiffread(char(filename(1)));
-    DN = cast(DNrow, 'double');   % All area
+       DN = cast(DNrow, 'double');   % All area
 
 elseif SAT_TYPE == 2   % Rapid Eye
     N_VIS_BANDS = 4; % Number of Visible bands
@@ -96,10 +102,11 @@ DN(DN==0)=NaN;
 % end
 % ***** Read spectral signature ******
 [sig_data, band, comp_name]  = tblread( sig_filename,'\t');
-
+disp(sig_data);
 N_COMP = numel(sig_data(:,1)); % number of total components
 
 pairs = nchoosek(1:N_COMP, N_VIS_BANDS);
+% Is N_PAIRS=/=1 possible?
 N_PAIRS = numel( pairs(:,1) );
 
 % ***** make sigunature matrix for all pairs *****
@@ -113,6 +120,7 @@ Ref = zeros(size(DN));
 
 if     SAT_TYPE == 1   % WorldView 2/3
 %     Ref = DN2Ref_WV2(DN, date_str, lat, lon, ACF, meanSunEl);
+% Isn't DN2Ref_WV2_6S=Ref(DN, date_str, ACF, meanSunEl, xa, xb, xc)?
     Ref = DN2Ref_WV2_6S(DN, date_str, ACF, meanSunEl, xa, xb, xc);   
 elseif SAT_TYPE == 2   % Rapid Eye
     Ref = DN2Ref_RE(DN, date_str, lat, lon);
@@ -121,6 +129,7 @@ end
 
 %% 
 % ***** calculate cos(zw) *****
+% What is nw?
 nw = 1.000293/1.343;
 Zw = asin(sin((90-meanSunEl)/180*pi)*nw);
 cosZw = cos(Zw);
@@ -131,6 +140,7 @@ cosZw = cos(Zw);
 % Ainf= sw_data(2,1:N_VIS_BANDS);
 
 % yrange_off = 4450:4750;  xrange_off = 1220:1260; % ★★★ Offshore deeper area ★★★
+% What are the value of x,yrange
 yrange_off = 1650:1700;  xrange_off = 1300:1350; % ★★★ Offshore deeper area ★★★
 Roff_data  = Ref(yrange_off, xrange_off, :);  
 for i=1:1:N_VIS_BANDS
