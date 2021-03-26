@@ -13,10 +13,10 @@ SAT_TYPE = 1;
 
 if     SAT_TYPE == 1   % WorldView 2/3
 %   Shiraho area
-% Input Image file
+
+% Change the filename(1) 
+% Input Image file 
 %     filename(1)={'P:\Satellite image\5Sep2012_Shiraho\052875753010_01\052875753010_01_P001_MUL\12SEP05023730-M2AS-052875753010_01_P001.TIF'}; % ★★★
-% For Home Matlab   
-filename(1)={'C:\Users\Nishigori\remote_sensing\spectral_unmixing\12SEP05023730-M2AS-052875753010_01_P001.TIF'}; % ★★★
     ACF  = [ 9.295654e-03  1.783568e-02  1.364197e-02  6.810718e-03  1.851735e-02  6.063145e-03  2.050828e-02  9.042234e-03 ]; % ★★★ Absolute Calibration Factors ★★★>>>>>>>>>  *.IMDを見て確認すること！！>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
     meanSunEl = 66.7; % ★★★ average sun elevation angle [degrees] ★★★>>>>>>>>>  *.IMDを見て確認すること！！>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 %     xa=[ 0.00269 0.00219 0.00224 0.00240 0.00254 0.00334 0.00370 0.00586 ]; % ★★★ atmospheric correction用パラメータ: 6SV2からのアウトプット
