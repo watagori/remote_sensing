@@ -17,6 +17,4 @@
    I_AREA=Number to divide
    NUM_area=number to calculate
 1. Finally type "SU_post".
-   You would see like this image.
-   (When you type SU_main(10,30))
-   ![SU_main(10,30)](https://github.com/watagori/remote_sensing/blob/master/image/Result.png?raw=true)
+1. Finish!
