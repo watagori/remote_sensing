@@ -19,4 +19,4 @@
 1. Finally type "SU_post".
    You would see like this image.
    (When you type SU_main(10,30))
-   <img src="./image/Result.png" width=100%>
+   <img src="https://github.com/watagori/remote_sensing/blob/master/image/Result.png" width=100%>
