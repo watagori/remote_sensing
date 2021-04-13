@@ -19,4 +19,4 @@
 1. Finally type "SU_post".
    You would see like this image.
    (When you type SU_main(10,30))
-   <img src="https://github.com/watagori/remote_sensing/blob/master/image/Result.png" width=100%>
+   ![SU_main(10,30)](<[http://url/to/img.png](https://github.com/watagori/remote_sensing/blob/master/image/Result.png)>)
