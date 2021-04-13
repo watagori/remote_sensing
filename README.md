@@ -14,7 +14,7 @@
 1. Click "Editor -> Run"
 1. Type like "SU_main(1,30)" on the command line.<br>
    (SU_main(I_AREA, NUM_AREA).<br>
-   I_AREA=Number to divide<br>
-   NUM_area=Number to calculate)
+   I_AREA=Number to calculate<br>
+   NUM_area=Number to divide)
 1. Finally type "SU_post".
 1. Finish!
