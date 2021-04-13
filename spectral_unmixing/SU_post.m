@@ -4,16 +4,16 @@
 % *************************************************************************
 
 % ***** Load data *********************************************************
-% load('output/SU_prep8.mat');
-load('output4_shiraho_all/SU_prep8.mat');
+load('output/SU_prep8.mat');
+% load('output4_shiraho_all/SU_prep8.mat');
 coverage_merged = zeros([size(Ref_area(:,:,1)) N_COMP]);
 depth_merged = zeros(size(Ref_area(:,:,1)));
 rss_merged = zeros(size(Ref_area(:,:,1)));
 
 
 for i=1:100
-%     LOAD_FILE=strcat('output/SU_results_',num2str(i,'%0.4u'),'.mat');
-    LOAD_FILE=strcat('output4_shiraho_all/SU_results_',num2str(i,'%0.4u'),'.mat');
+    LOAD_FILE=strcat('output/SU_results_',num2str(i,'%0.4u'),'.mat');
+%     LOAD_FILE=strcat('output4_shiraho_all/SU_results_',num2str(i,'%0.4u'),'.mat');
     
     try  
         load(LOAD_FILE);

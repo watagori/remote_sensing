@@ -63,10 +63,10 @@ cov_tmp2 = zeros([size(Ref_trm(:,:,1)) N_VIS_BANDS]);  % coverage(coverage==0) =
 
 %Cluster settings
 myCluster = parcluster('local');
-myCluster.NumWorkers = 11;
+myCluster.NumWorkers = 7;
 saveProfile(myCluster);
 
-parpool(myCluster,11)  % ššš for parallel computing ššš
+parpool(myCluster,7)  % ššš for parallel computing ššš
 parfor k=1:kend      % ššš for parallel computing ššš
 % for k=1:kend
     for j=1:jmax

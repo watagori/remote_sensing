@@ -16,38 +16,39 @@ if     SAT_TYPE == 1   % WorldView 2/3
 
 % Change the filename(1) 
 % Input Image file 
-    filename(1)={'./12SEP05023730-M2AS-052875753010_01_P001.TIF'}; % ššš
-    ACF  = [ 9.295654e-03  1.783568e-02  1.364197e-02  6.810718e-03  1.851735e-02  6.063145e-03  2.050828e-02  9.042234e-03 ]; % ššš Absolute Calibration Factors ššš>>>>>>>>>  *.IMD‚ðŒ©‚ÄŠm”F‚·‚é‚±‚ÆII>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-    meanSunEl = 66.7; % ššš average sun elevation angle [degrees] ššš>>>>>>>>>  *.IMD‚ðŒ©‚ÄŠm”F‚·‚é‚±‚ÆII>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-%     xa=[ 0.00269 0.00219 0.00224 0.00240 0.00254 0.00334 0.00370 0.00586 ]; % ššš atmospheric correction—pƒpƒ‰ƒ[ƒ^: 6SV2‚©‚ç‚ÌƒAƒEƒgƒvƒbƒg
-%     xb=[ 0.13325 0.07940 0.04427 0.02937 0.02158 0.01770 0.01091 0.00985 ]; % ššš atmospheric correction—pƒpƒ‰ƒ[ƒ^: 6SV2‚©‚ç‚ÌƒAƒEƒgƒvƒbƒg
-%     xc=[ 0.20784 0.15368 0.10622 0.08068 0.06667 0.05441 0.04298 0.03719 ]; % ššš atmospheric correction—pƒpƒ‰ƒ[ƒ^: 6SV2‚©‚ç‚ÌƒAƒEƒgƒvƒbƒg
-%     xa=[ 0.00269 0.00219 0.00224 0.00240 0.00254 0.00334 0.00370 0.00586 ]; % ššš atmospheric correction—pƒpƒ‰ƒ[ƒ^: 6SV2‚©‚ç‚ÌƒAƒEƒgƒvƒbƒg
-%     xb=[ 0.18156 0.11132 0.06446 0.04457 0.03372 0.02837 0.01879 0.01710 ]; % ššš atmospheric correction—pƒpƒ‰ƒ[ƒ^: 6SV2‚©‚ç‚ÌƒAƒEƒgƒvƒbƒg
-%     xc=[ 0.20784 0.15368 0.10622 0.08068 0.06667 0.05441 0.04298 0.03719 ]; % ššš atmospheric correction—pƒpƒ‰ƒ[ƒ^: 6SV2‚©‚ç‚ÌƒAƒEƒgƒvƒbƒg
+%     filename(1)={'./12SEP05023730-M2AS-052875753010_01_P001.TIF'}; % ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+     filename(1)={'P:\Satellite image\5Sep2012_Shiraho\052875753010_01\052875753010_01_P001_MUL\12SEP05023730-M2AS-052875753010_01_P001.TIF'};
+    ACF  = [ 9.295654e-03  1.783568e-02  1.364197e-02  6.810718e-03  1.851735e-02  6.063145e-03  2.050828e-02  9.042234e-03 ]; % ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Absolute Calibration Factors ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½>>>>>>>>>  *.IMDï¿½ï¿½ï¿½ï¿½ï¿½ÄŠmï¿½Fï¿½ï¿½ï¿½é‚±ï¿½ÆIï¿½I>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    meanSunEl = 66.7; % ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ average sun elevation angle [degrees] ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½>>>>>>>>>  *.IMDï¿½ï¿½ï¿½ï¿½ï¿½ÄŠmï¿½Fï¿½ï¿½ï¿½é‚±ï¿½ÆIï¿½I>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+%     xa=[ 0.00269 0.00219 0.00224 0.00240 0.00254 0.00334 0.00370 0.00586 ]; % ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ atmospheric correctionï¿½pï¿½pï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^: 6SV2ï¿½ï¿½ï¿½ï¿½ÌƒAï¿½Eï¿½gï¿½vï¿½bï¿½g
+%     xb=[ 0.13325 0.07940 0.04427 0.02937 0.02158 0.01770 0.01091 0.00985 ]; % ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ atmospheric correctionï¿½pï¿½pï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^: 6SV2ï¿½ï¿½ï¿½ï¿½ÌƒAï¿½Eï¿½gï¿½vï¿½bï¿½g
+%     xc=[ 0.20784 0.15368 0.10622 0.08068 0.06667 0.05441 0.04298 0.03719 ]; % ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ atmospheric correctionï¿½pï¿½pï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^: 6SV2ï¿½ï¿½ï¿½ï¿½ÌƒAï¿½Eï¿½gï¿½vï¿½bï¿½g
+%     xa=[ 0.00269 0.00219 0.00224 0.00240 0.00254 0.00334 0.00370 0.00586 ]; % ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ atmospheric correctionï¿½pï¿½pï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^: 6SV2ï¿½ï¿½ï¿½ï¿½ÌƒAï¿½Eï¿½gï¿½vï¿½bï¿½g
+%     xb=[ 0.18156 0.11132 0.06446 0.04457 0.03372 0.02837 0.01879 0.01710 ]; % ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ atmospheric correctionï¿½pï¿½pï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^: 6SV2ï¿½ï¿½ï¿½ï¿½ÌƒAï¿½Eï¿½gï¿½vï¿½bï¿½g
+%     xc=[ 0.20784 0.15368 0.10622 0.08068 0.06667 0.05441 0.04298 0.03719 ]; % ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ atmospheric correctionï¿½pï¿½pï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^: 6SV2ï¿½ï¿½ï¿½ï¿½ÌƒAï¿½Eï¿½gï¿½vï¿½bï¿½g
 
 % Atmospheric correction is the process of removing the effects of the atmosphere on the reflectance values of images taken by satellite or airborne sensors.
 % 6SV1 (Second Simulation of a Satellite Signal in the Solar Spectrum, Vector, version 1) is an advanced radiative transfer code designed to simulate the reflection of solar radiation by a coupled atmosphere-surface system for a wide range of atmospheric, spectral and geometrical conditions.
 % 6sv's hint? :  https://artmotoolbox.com/radiative-transfer-models/89-atmospheric-rtms/27-6sv.html
-    xa=[ 0.00262 0.00213 0.00219 0.00235 0.00249 0.00327 0.00363 0.00575 ]; % ššš atmospheric correction—pƒpƒ‰ƒ[ƒ^: 6SV2‚©‚ç‚ÌƒAƒEƒgƒvƒbƒg
-    xb=[ 0.16382 0.09627 0.05185 0.03290 0.02301 0.01822 0.00965 0.00826 ]; % ššš atmospheric correction—pƒpƒ‰ƒ[ƒ^: 6SV2‚©‚ç‚ÌƒAƒEƒgƒvƒbƒg
-    xc=[ 0.19264 0.13545 0.08524 0.05801 0.04323 0.03018 0.01845 0.01211 ]; % ššš atmospheric correction—pƒpƒ‰ƒ[ƒ^: 6SV2‚©‚ç‚ÌƒAƒEƒgƒvƒbƒg
+    xa=[ 0.00262 0.00213 0.00219 0.00235 0.00249 0.00327 0.00363 0.00575 ]; % ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ atmospheric correctionï¿½pï¿½pï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^: 6SV2ï¿½ï¿½ï¿½ï¿½ÌƒAï¿½Eï¿½gï¿½vï¿½bï¿½g
+    xb=[ 0.16382 0.09627 0.05185 0.03290 0.02301 0.01822 0.00965 0.00826 ]; % ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ atmospheric correctionï¿½pï¿½pï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^: 6SV2ï¿½ï¿½ï¿½ï¿½ÌƒAï¿½Eï¿½gï¿½vï¿½bï¿½g
+    xc=[ 0.19264 0.13545 0.08524 0.05801 0.04323 0.03018 0.01845 0.01211 ]; % ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ atmospheric correctionï¿½pï¿½pï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^: 6SV2ï¿½ï¿½ï¿½ï¿½ÌƒAï¿½Eï¿½gï¿½vï¿½bï¿½g
 %   Nagura area
-%     filename(1)={'D:\Documents\GIS_data\Satellite image\2014-11-28_Nagura_WV2\054578591010_01\054578591010_01_P001_MUL\14NOV28023411-M2AS-054578591010_01_P001.TIF'}; % ššš
-%     ACF  = [ 9.295654e-03  1.260825e-02  9.713071e-03  5.101088e-03  1.103623e-02  4.539619e-03  1.224380e-02  9.042234e-03 ]; % ššš Absolute Calibration Factors ššš>>>>>>>>>  *.IMD‚ðŒ©‚ÄŠm”F‚·‚é‚±‚ÆII>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+%     filename(1)={'D:\Documents\GIS_data\Satellite image\2014-11-28_Nagura_WV2\054578591010_01\054578591010_01_P001_MUL\14NOV28023411-M2AS-054578591010_01_P001.TIF'}; % ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+%     ACF  = [ 9.295654e-03  1.260825e-02  9.713071e-03  5.101088e-03  1.103623e-02  4.539619e-03  1.224380e-02  9.042234e-03 ]; % ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Absolute Calibration Factors ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½>>>>>>>>>  *.IMDï¿½ï¿½ï¿½ï¿½ï¿½ÄŠmï¿½Fï¿½ï¿½ï¿½é‚±ï¿½ÆIï¿½I>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 elseif SAT_TYPE == 2   % Rapid Eye
 %   Yaeyama area  
-    filename(1)={'D:\Documents\GIS_data\Satellite image\2015-03-19_Yaeyama_RapidEye\2015-03-19T030941_RE3_1B-NAC_22345099_311449\2015-03-19T030941_RE3_1B-NAC_22345099_311449_band1.tif'}; % ššš Band1 Blue     (440-510 nm) ššš
-    filename(2)={'D:\Documents\GIS_data\Satellite image\2015-03-19_Yaeyama_RapidEye\2015-03-19T030941_RE3_1B-NAC_22345099_311449\2015-03-19T030941_RE3_1B-NAC_22345099_311449_band2.tif'}; % ššš Band2 Green    (520-590 nm) ššš
-    filename(3)={'D:\Documents\GIS_data\Satellite image\2015-03-19_Yaeyama_RapidEye\2015-03-19T030941_RE3_1B-NAC_22345099_311449\2015-03-19T030941_RE3_1B-NAC_22345099_311449_band3.tif'}; % ššš Band3 Red      (630-685 nm) ššš
-    filename(4)={'D:\Documents\GIS_data\Satellite image\2015-03-19_Yaeyama_RapidEye\2015-03-19T030941_RE3_1B-NAC_22345099_311449\2015-03-19T030941_RE3_1B-NAC_22345099_311449_band4.tif'}; % ššš Band4 Red Edge (690-730 nm) ššš
-    filename(5)={'D:\Documents\GIS_data\Satellite image\2015-03-19_Yaeyama_RapidEye\2015-03-19T030941_RE3_1B-NAC_22345099_311449\2015-03-19T030941_RE3_1B-NAC_22345099_311449_band5.tif'}; % ššš Band5 NIR      (760-850 nm) ššš   
+    filename(1)={'P:\Satellite image\2015-03-19_Yaeyama_RapidEye\2015-03-19T030941_RE3_1B-NAC_22345099_311449\2015-03-19T030941_RE3_1B-NAC_22345099_311449_band1.tif'}; % ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Band1 Blue     (440-510 nm) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    filename(2)={'P:\Satellite image\2015-03-19_Yaeyama_RapidEye\2015-03-19T030941_RE3_1B-NAC_22345099_311449\2015-03-19T030941_RE3_1B-NAC_22345099_311449_band2.tif'}; % ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Band2 Green    (520-590 nm) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    filename(3)={'P:\Satellite image\2015-03-19_Yaeyama_RapidEye\2015-03-19T030941_RE3_1B-NAC_22345099_311449\2015-03-19T030941_RE3_1B-NAC_22345099_311449_band3.tif'}; % ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Band3 Red      (630-685 nm) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    filename(4)={'P:\Satellite image\2015-03-19_Yaeyama_RapidEye\2015-03-19T030941_RE3_1B-NAC_22345099_311449\2015-03-19T030941_RE3_1B-NAC_22345099_311449_band4.tif'}; % ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Band4 Red Edge (690-730 nm) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    filename(5)={'P:\Satellite image\2015-03-19_Yaeyama_RapidEye\2015-03-19T030941_RE3_1B-NAC_22345099_311449\2015-03-19T030941_RE3_1B-NAC_22345099_311449_band5.tif'}; % ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Band5 NIR      (760-850 nm) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½   
 %     filename(6)={'D:\Documents\GIS_data\Satellite image\2015-03-19_Yaeyama_RapidEye\2015-03-19T030941_RE3_1B-NAC_22345099_311449\2015-03-19T030941_RE3_1B-NAC_22345099_311449_udm.tif'};
 end
 
 % Shiraho WV2
-% ššš *.IMD‚ðŒ©‚ÄŠm”F‚·‚é‚±‚Æ@ššš
+% ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ *.IMDï¿½ï¿½ï¿½ï¿½ï¿½ÄŠmï¿½Fï¿½ï¿½ï¿½é‚±ï¿½Æ@ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 date_str = '2012/09/05 02:37:30';
 lat = 24.41;  lon = 124.26;
 % Nagura WV2
@@ -125,7 +126,7 @@ if     SAT_TYPE == 1   % WorldView 2/3
 % Isn't DN2Ref_WV2_6S=Ref(DN, date_str, ACF, meanSunEl, xa, xb, xc)?
     Ref = DN2Ref_WV2_6S(DN, date_str, ACF, meanSunEl, xa, xb, xc);   
 elseif SAT_TYPE == 2   % Rapid Eye
-    Ref = DN2Ref_RE(DN, date_str, lat, lon);
+   DN2Ref_RE=Ref(DN, date_str, lat, lon);
     
 end
 
@@ -141,14 +142,14 @@ cosZw = cos(Zw);
 % Kz  = sw_data(1,1:N_VIS_BANDS);
 % Ainf= sw_data(2,1:N_VIS_BANDS);
 
-% yrange_off = 4450:4750;  xrange_off = 1220:1260; % ššš Offshore deeper area ššš
+% yrange_off = 4450:4750;  xrange_off = 1220:1260; % ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Offshore deeper area ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 % What are the value of x,yrange
-yrange_off = 1650:1700;  xrange_off = 1300:1350; % ššš Offshore deeper area ššš
+yrange_off = 1650:1700;  xrange_off = 1300:1350; % ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Offshore deeper area ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 Roff_data  = Ref(yrange_off, xrange_off, :);  
 for i=1:1:N_VIS_BANDS
     Ainf(i) = nanmedian(reshape(Roff_data(:,:,i),1,[]));
 end
-% Asand = Asg_matrix(1,:,1);              % Albedo of sand from input file (first row should be 'sand'). ššš
+% Asand = Asg_matrix(1,:,1);              % Albedo of sand from input file (first row should be 'sand'). ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 x0=[0.2, 0.05, 0.1]; % initial, Chl-a (ug/L), ag(400), B
 A=[]; b=[]; Aeq=[]; beq=[];
@@ -201,13 +202,13 @@ clear RGB
 %
 if     SAT_TYPE == 1   % WorldView 2/3
     mask = ones(size(Ref(:,:,5)));
-    mask(Ref(:,:,8)>0.06)=nan;  % ššš NIR‚Ì”½ŽË‚ª‚‚¢‚Æ‚±‚ëi—¤j‚ðƒ}ƒXƒNi—v’²®j ššš
-    mask(Ref(:,:,3)<0.03)=nan;   % ššš Green‚Ì”½ŽË‚ª’á‚¢‚Æ‚±‚ëiŠO—m/[‚¢‚Æ‚±‚ëj‚ðƒ}ƒXƒNi—v’²®j ššš
+    mask(Ref(:,:,8)>0.06)=nan;  % ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ NIRï¿½Ì”ï¿½ï¿½Ë‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ‚ï¿½ï¿½ï¿½iï¿½ï¿½ï¿½jï¿½ï¿½ï¿½}ï¿½Xï¿½Nï¿½iï¿½vï¿½ï¿½ï¿½ï¿½ï¿½j ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    mask(Ref(:,:,3)<0.03)=nan;   % ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Greenï¿½Ì”ï¿½ï¿½Ë‚ï¿½ï¿½á‚¢ï¿½Æ‚ï¿½ï¿½ï¿½iï¿½Oï¿½m/ï¿½[ï¿½ï¿½ï¿½Æ‚ï¿½ï¿½ï¿½jï¿½ï¿½ï¿½}ï¿½Xï¿½Nï¿½iï¿½vï¿½ï¿½ï¿½ï¿½ï¿½j ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     mask(isnan(Ref(:,:,1)))=nan;
 elseif SAT_TYPE == 2   % Rapid Eye
     mask = ones(size(Ref(:,:,5)));
-    mask(Ref(:,:,5)>0.16)=nan;  % ššš NIR‚Ì”½ŽË‚ª‚‚¢‚Æ‚±‚ëi—¤j‚ðƒ}ƒXƒNi—v’²®j ššš
-    mask(Ref(:,:,2)<0.1)=nan;   % ššš Green‚Ì”½ŽË‚ª’á‚¢‚Æ‚±‚ëiŠO—m/[‚¢‚Æ‚±‚ëj‚ðƒ}ƒXƒNi—v’²®j ššš
+    mask(Ref(:,:,5)>0.16)=nan;  % ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ NIRï¿½Ì”ï¿½ï¿½Ë‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ‚ï¿½ï¿½ï¿½iï¿½ï¿½ï¿½jï¿½ï¿½ï¿½}ï¿½Xï¿½Nï¿½iï¿½vï¿½ï¿½ï¿½ï¿½ï¿½j ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    mask(Ref(:,:,2)<0.1)=nan;   % ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Greenï¿½Ì”ï¿½ï¿½Ë‚ï¿½ï¿½á‚¢ï¿½Æ‚ï¿½ï¿½ï¿½iï¿½Oï¿½m/ï¿½[ï¿½ï¿½ï¿½Æ‚ï¿½ï¿½ï¿½jï¿½ï¿½ï¿½}ï¿½Xï¿½Nï¿½iï¿½vï¿½ï¿½ï¿½ï¿½ï¿½j ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     mask(isnan(Ref(:,:,1)))=nan;
 end
 
@@ -253,17 +254,17 @@ clear RGB
 
 clear Ref_area  mask_area;
 
-yrange_area = 1:size(Ref,1);  xrange_area = 1:size(Ref,2); % all area šššššššššššššššššš
+yrange_area = 1:size(Ref,1);  xrange_area = 1:size(Ref,2); % all area ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 % % ***Yaeyama Rapid Eye
-% yrange_area = 4950:5300;  xrange_area = 9850:10100; % Shiraho area šššššššššššššššššš
-% yrange_area = 3700:5400;  xrange_area = 9600:10200; % Shiraho comp. domain area šššššššššššššššššš
+% yrange_area = 4950:5300;  xrange_area = 9850:10100; % Shiraho area ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+% yrange_area = 3700:5400;  xrange_area = 9600:10200; % Shiraho comp. domain area ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 % ***Shiraho WorldView-2
-% yrange_area = 4600:5000;  xrange_area = 600:1200;   % šššš
-% yrange_area = 4800:4900;  xrange_area = 650:1200;   % šššššššššššššššššš
-% yrange_area = 5400:5405;  xrange_area = 580:1100;   % šššš
-% yrange_area = 3800:5800;  xrange_area = 500:1200;   % šššš
+% yrange_area = 4600:5000;  xrange_area = 600:1200;   % ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+% yrange_area = 4800:4900;  xrange_area = 650:1200;   % ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+% yrange_area = 5400:5405;  xrange_area = 580:1100;   % ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+% yrange_area = 3800:5800;  xrange_area = 500:1200;   % ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 % % ***Nagura WorldView-2
-% yrange_area = 2000:2400;  xrange_area = 2200:4000;  % šššššššššššššššššš
+% yrange_area = 2000:2400;  xrange_area = 2200:4000;  % ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 Ref_area = cast(Ref_m(yrange_area, xrange_area,:), 'double');
 mask_area= cast(mask    (yrange_area, xrange_area,:), 'double');
